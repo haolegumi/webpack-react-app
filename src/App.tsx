@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { Suspense } from 'react'
+import { RouterProvider } from 'react-router-dom'
+import router from './routers/routers'
 
 function App() {
   return (
-    <div>
-      <span className='text-red'>test css</span>
-    </div>
+    <React.Fragment>
+      <Suspense fallback={<div> ........Loading</div>}>
+        <RouterProvider router={router} />
+      </Suspense>
+    </React.Fragment>
   )
 }
 

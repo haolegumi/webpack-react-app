@@ -1,7 +1,11 @@
 import React from 'react'
 
 function Login() {
-  return <div className='font-bold'>Login</div>
+  return (
+    <React.Fragment>
+      <div>login</div>
+    </React.Fragment>
+  )
 }
 
 export default Login

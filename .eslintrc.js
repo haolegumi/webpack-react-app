@@ -40,6 +40,12 @@ module.exports = {
     // Cảnh báo khi thẻ <a target='_blank'> mà không có rel="noreferrer"
     'react/jsx-no-target-blank': 'warn',
     // Tăng cường một số rule prettier (copy từ file .prettierrc qua)
+    'no-empty-function': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'import/no-unresolved': 'off',
+    'no-undef': 'off',
+    'eslint no-undef-init': 'off',
     'prettier/prettier': [
       'warn',
       {
