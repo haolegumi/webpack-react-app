@@ -12,7 +12,7 @@ const routers = [
     routes: [
       {
         id: 12,
-        path: '/home',
+        path: '',
         loader: () => {
           return null
         },

@@ -46,6 +46,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'no-undef': 'off',
     'eslint no-undef-init': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
     'prettier/prettier': [
       'warn',
       {

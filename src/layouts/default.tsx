@@ -1,15 +1,29 @@
 import React, { PropsWithChildren } from 'react'
 import { Outlet } from 'react-router-dom'
-
+import { Layout } from 'antd'
+import Header from '@components/header'
+import Footer from '@components/footer'
 const Default: React.FC<PropsWithChildren> = () => {
+  const { Content } = Layout
+
   return (
-    <main className='flex'>
-      <section className='sidebar'>sidebar</section>
-      <section className='content'>
-        <header className=' text-red-600 font-bold'>header</header>
-        <div className='content-main'>{<Outlet />}</div>
-      </section>
-    </main>
+    <Layout>
+      <Header />
+
+      <Content
+        style={{
+          width: '1200px',
+          height: 'calc(100vh - 160px)',
+          margin: '0 auto',
+          padding: '15px 0',
+          overflow: 'auto'
+        }}
+      >
+        <Outlet />
+      </Content>
+
+      <Footer />
+    </Layout>
   )
 }
 
