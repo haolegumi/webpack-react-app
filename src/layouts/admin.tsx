@@ -2,7 +2,8 @@ import React, { PropsWithChildren } from 'react'
 import { Outlet } from 'react-router-dom'
 import { Layout } from 'antd'
 import Header from '@components/header'
-const Default: React.FC<PropsWithChildren> = () => {
+import Footer from '@components/footer'
+const Admin: React.FC<PropsWithChildren> = () => {
   const { Content } = Layout
 
   return (
@@ -20,8 +21,9 @@ const Default: React.FC<PropsWithChildren> = () => {
       >
         <Outlet />
       </Content>
+      <Footer />
     </Layout>
   )
 }
 
-export default Default
+export default Admin
