@@ -14,7 +14,7 @@ const Default: React.FC<PropsWithChildren> = () => {
           width: '1200px',
           height: 'calc(100vh - 80px)',
           margin: '0 auto',
-          padding: '15px 0',
+          padding: '0',
           overflow: 'auto'
         }}
       >
