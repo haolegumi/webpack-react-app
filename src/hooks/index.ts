@@ -1,3 +1,5 @@
+import { toast, ToastPosition } from 'react-toastify'
+
 export function setCookie(name: string, value: any, days?: any): any {
   var expires = ''
   if (days) {
@@ -21,4 +23,21 @@ export function getCookie(name: string): any {
 
 export function eraseCookie(name: string) {
   document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+}
+
+export const showToast = (type: string, message: string, position?: ToastPosition) => {
+  switch (type) {
+    case 'error':
+      return toast.error(message, {
+        position: position ? position : 'top-right'
+      })
+
+    case 'success':
+      return toast.success(message, {
+        position: position ? position : 'top-right'
+      })
+
+    default:
+      break
+  }
 }

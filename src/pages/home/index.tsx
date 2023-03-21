@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import logoImg from '@src/assets/images/logo.svg'
 import bannerImg from '@src/assets/images/banner1.jpg'
+import { showToast } from '@src/hooks'
 
 const Banner = styled.div`
   width: 100%;
@@ -32,8 +32,12 @@ const SubBanner = styled.div`
 `
 
 function Home() {
+  // const handleShow = () => {
+  //   showToast('error', 'abc')
+  // }
+
   return (
-    <div style={{ height: '3000px' }} className='font-bold'>
+    <div className='font-bold'>
       <Banner>
         <SubBanner>
           <span className='sub-text'>Chill With Me!</span>

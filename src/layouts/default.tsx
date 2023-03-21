@@ -2,8 +2,11 @@ import React, { PropsWithChildren } from 'react'
 import { Outlet } from 'react-router-dom'
 import { Layout } from 'antd'
 import Header from '@components/header'
+import Loading from '@components/loading'
 const Default: React.FC<PropsWithChildren> = () => {
   const { Content } = Layout
+
+  const isLoading = false
 
   return (
     <Layout>
@@ -15,10 +18,11 @@ const Default: React.FC<PropsWithChildren> = () => {
           height: 'calc(100vh - 80px)',
           margin: '0 auto',
           padding: '0',
-          overflow: 'auto'
+          overflow: 'auto',
+          position: 'relative'
         }}
       >
-        <Outlet />
+        {isLoading ? <Loading /> : <Outlet />}
       </Content>
     </Layout>
   )
